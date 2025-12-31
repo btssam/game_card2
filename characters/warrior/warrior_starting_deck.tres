@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=5 format=3 uid="uid://c5wue4hb0wu46"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_ta605"]
+[ext_resource type="Resource" uid="uid://cpf4ct1qrh20e" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="2_6ojbn"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="2_hr4ow"]
+[ext_resource type="Resource" uid="uid://do6bo4h2o55tl" path="res://characters/warrior/cards/warrior_block.tres" id="3_xjavs"]
+
+[resource]
+script = ExtResource("2_hr4ow")
+cards = Array[ExtResource("1_ta605")]([ExtResource("2_6ojbn"), ExtResource("2_6ojbn"), ExtResource("2_6ojbn"), ExtResource("2_6ojbn"), ExtResource("2_6ojbn"), ExtResource("3_xjavs"), ExtResource("3_xjavs"), ExtResource("3_xjavs"), ExtResource("3_xjavs"), ExtResource("3_xjavs")])
