@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcbnxuvlqyi7f"]
+[gd_scene load_steps=13 format=3 uid="uid://bcbnxuvlqyi7f"]
 
 [ext_resource type="Texture2D" uid="uid://cp4iq5fd6j8be" path="res://art/background.png" id="1_x8w7f"]
 [ext_resource type="PackedScene" uid="uid://c3k8tm36nh4ud" path="res://scenes/enemy/enemy.tscn" id="2_e4wgw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://cpf4ct1qrh20e" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="4_m6c3l"]
 [ext_resource type="Resource" uid="uid://qg8ari15grxk" path="res://characters/warrior/warrior.tres" id="5_noher"]
 [ext_resource type="Resource" uid="uid://do6bo4h2o55tl" path="res://characters/warrior/cards/warrior_block.tres" id="5_pih78"]
+[ext_resource type="PackedScene" uid="uid://becahsgkswcmb" path="res://scenes/ui/mana_ui.tscn" id="11_fqclx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ax4h0"]
 size = Vector2(256, 100)
@@ -61,11 +62,17 @@ script = ExtResource("2_l63ra")
 [node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("2_frgbb")]
 layout_mode = 2
 card = ExtResource("4_m6c3l")
+char_stats = ExtResource("5_noher")
 
 [node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("2_frgbb")]
 layout_mode = 2
 card = ExtResource("4_m6c3l")
+char_stats = ExtResource("5_noher")
 
 [node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("2_frgbb")]
 layout_mode = 2
 card = ExtResource("5_pih78")
+char_stats = ExtResource("5_noher")
+
+[node name="ManaUI" parent="BattleUI" instance=ExtResource("11_fqclx")]
+char_stats = ExtResource("5_noher")
