@@ -60,12 +60,12 @@ func setup_chances() -> void:
 	total_weight += action.chance_weight
 	action.accumulated_weight = total_weight
 
+
 func _set_enemy(value: Enemy) -> void:
 	enemy = value
 	
 	for action in get_children():
 		action.enemy = enemy
-	
 	
 	
 func _set_target(value: Node2D) -> void:

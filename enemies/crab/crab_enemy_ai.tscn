@@ -10,9 +10,13 @@ script = ExtResource("1_h5vas")
 
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_ggova")
+type = 1
+chance_weight = 1.0
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_bvpe0")
+type = 1
+chance_weight = 1.0
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_evdah")
