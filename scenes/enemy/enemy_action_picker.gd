@@ -57,8 +57,8 @@ func setup_chances() -> void:
 		if not action or action.type != EnemyAction.Type.CHANCE_BASED:
 			continue
 	
-	total_weight += action.chance_weight
-	action.accumulated_weight = total_weight
+		total_weight += action.chance_weight
+		action.accumulated_weight = total_weight
 
 
 func _set_enemy(value: Enemy) -> void:
