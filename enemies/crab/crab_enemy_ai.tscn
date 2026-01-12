@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c782u1lb23bs"]
+[gd_scene load_steps=14 format=3 uid="uid://c782u1lb23bs"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_h5vas"]
 [ext_resource type="Script" path="res://enemies/crab/crab_attack_action.gd" id="2_ggova"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/tile_0103.png" id="3_mr50e"]
 [ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_5fimf"]
 [ext_resource type="Script" path="res://enemies/crab/crab_mega_block_action.gd" id="4_evdah"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/enemy_attack.ogg" id="5_gvst2"]
 [ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="6_jqaa8"]
 [ext_resource type="Texture2D" uid="uid://oe7v35ii8vrs" path="res://art/tile_0102.png" id="8_2otx6"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/enemy_block.ogg" id="8_4lq1p"]
 
 [sub_resource type="Resource" id="Resource_dedfe"]
 script = ExtResource("4_5fimf")
@@ -30,15 +32,18 @@ script = ExtResource("1_h5vas")
 [node name="AttackAction" type="Node" parent="."]
 script = ExtResource("2_ggova")
 intent = SubResource("Resource_dedfe")
+sound = ExtResource("5_gvst2")
 type = 1
 chance_weight = 1.0
 
 [node name="BlockAction" type="Node" parent="."]
 script = ExtResource("3_bvpe0")
 intent = SubResource("Resource_75pu5")
+sound = ExtResource("8_4lq1p")
 type = 1
 chance_weight = 1.0
 
 [node name="MegaBlockAction" type="Node" parent="."]
 script = ExtResource("4_evdah")
 intent = SubResource("Resource_jeryg")
+sound = ExtResource("8_4lq1p")

@@ -1,9 +1,9 @@
 extends EnemyAction
 
-@export var block := 6
+@export var block := 4
 
 
-func perform_action() -> void:
+func perform_action():
 	if not enemy or not target:
 		return
 	
@@ -12,7 +12,10 @@ func perform_action() -> void:
 	block_effect.sound = sound
 	block_effect.execute([enemy])
 	
+	#SFXPlayer.play(sound)
+	
 	get_tree().create_timer(0.6, false).timeout.connect(
 		func():
-			Events.enemy_action_completed.emit(enemy)
+		Events.enemy_action_completed.emit(enemy)
 	)
+	

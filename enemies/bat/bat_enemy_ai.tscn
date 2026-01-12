@@ -1,0 +1,37 @@
+[gd_scene load_steps=11 format=3 uid="uid://2i2chiadqqno"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_seddn"]
+[ext_resource type="Script" path="res://enemies/bat/bat_attack_action.gd" id="2_0j6nk"]
+[ext_resource type="Script" path="res://enemies/bat/bat_block_action.gd" id="3_202x3"]
+[ext_resource type="Texture2D" uid="uid://bfvi02kojsa00" path="res://art/tile_0103.png" id="3_d3vyn"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_l8rmn"]
+[ext_resource type="AudioStream" uid="uid://de2ryat1pxq6" path="res://art/enemy_attack.ogg" id="5_rvkrx"]
+[ext_resource type="Texture2D" uid="uid://bi6pfjs32f820" path="res://art/tile_0101.png" id="7_delep"]
+[ext_resource type="AudioStream" uid="uid://k8m4o3hlwm7l" path="res://art/enemy_block.ogg" id="8_hiriw"]
+
+[sub_resource type="Resource" id="Resource_p5ypo"]
+script = ExtResource("4_l8rmn")
+number = "2x4"
+icon = ExtResource("3_d3vyn")
+
+[sub_resource type="Resource" id="Resource_ibaxk"]
+script = ExtResource("4_l8rmn")
+number = ""
+icon = ExtResource("7_delep")
+
+[node name="BatEnemyAI" type="Node"]
+script = ExtResource("1_seddn")
+
+[node name="BatAttackAction" type="Node" parent="."]
+script = ExtResource("2_0j6nk")
+intent = SubResource("Resource_p5ypo")
+sound = ExtResource("5_rvkrx")
+type = 1
+chance_weight = 3.0
+
+[node name="BatBlockAction" type="Node" parent="."]
+script = ExtResource("3_202x3")
+intent = SubResource("Resource_ibaxk")
+sound = ExtResource("8_hiriw")
+type = 1
+chance_weight = 1.0
